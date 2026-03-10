@@ -1,0 +1,902 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>TaskToolbox – Planner erweitern. Einfach deployen.</title>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+        <a class="brand" href="#top">
+          <img src="design\TTB_Logo.png" alt="TTB Logo" />
+        </a>
+        <nav class="nav-links">
+          <a href="#features">Features</a>
+        <a href="#pricing">Lite vs Pro</a>
+          <a href="#requirements">Requirements</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="btn btn-primary" href="#contact">Demo anfragen</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="reveal visible">
+            <div class="badge-stack">
+              <span class="badge badge-planner">
+                <img src="design\planner.png" alt="Microsoft Planner Logo" />
+                Extends Microsoft Planner
+              </span>
+              <span class="badge badge-powerapps">
+                <img src="design\powerapps.svg.png" alt="Power Apps Logo" />
+                Built with Power Apps
+              </span>
+              <span class="badge badge-teams">
+                <img src="design\teams.svg.png" alt="Microsoft Teams Logo" />
+                Use with Microsoft Teams
+              </span>
+            </div>
+            <h1>
+              <span>Planner erweitern.</span><br />
+              <span>Übersicht gewinnen.</span><br />
+              <span>Einfach deployen.</span>
+            </h1>
+            <p>
+              TaskToolbox ergänzt Microsoft Planner um ein automatisch
+              generiertes Gantt-Chart, eine deutlich stärkere Task- und
+              Bucket-Verwaltung, Analysen, Templates, Abhängigkeiten und weitere
+              Funktionen – mit bewusst schlankem Setup und geringem
+              Schnittstellenaufwand.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#pricing">Pakete vergleichen</a>
+              <a class="btn btn-secondary" href="#features"
+                >Features entdecken</a
+              >
+            </div>
+            <div class="hero-stats">
+              <div class="stat-card">
+                <strong>Lite &amp; Pro</strong>
+                <span
+                  >Klarer Ausbaupfad vom Einstieg bis zur erweiterten
+                  Projektsteuerung</span
+                >
+              </div>
+              <div class="stat-card">
+                <strong>Low Friction</strong>
+                <span
+                  >Deployment mit wenigen Abhängigkeiten und vertrauter
+                  M365-Umgebung</span
+                >
+              </div>
+              <div class="stat-card">
+                <strong>Planner+</strong>
+                <span
+                  >Mehr Struktur, Transparenz und Steuerung für Teams und
+                  Aufgaben</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="app-preview reveal visible">
+            <div class="preview-topbar">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+            <div class="preview-body">
+              <div class="mini-panel">
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 12px;
+                  "
+                >
+                  <div>
+                    <strong style="font-size: 1.05rem; display: block"
+                      >TaskToolbox Gantt-Chart</strong
+                    >
+                    <span style="color: var(--muted); font-size: 0.92rem"
+                      >Planner-Ansicht mit Timeline, Buckets und
+                      Abhängigkeiten</span
+                    >
+                  </div>
+                </div>
+                <div class="gantt-bars">
+                  <div class="gantt-row">
+                    <span>Task A</span>
+                    <div class="bar-lane">
+                      <div class="bar" style="left: 6%; width: 42%"></div>
+                    </div>
+                  </div>
+                  <div class="gantt-row">
+                    <span>Task B</span>
+                    <div class="bar-lane">
+                      <div class="bar" style="left: 20%; width: 34%"></div>
+                    </div>
+                  </div>
+                  <div class="gantt-row">
+                    <span>Task C</span>
+                    <div class="bar-lane">
+                      <div class="bar" style="left: 48%; width: 22%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="preview-grid">
+                <div class="mini-panel">
+                  <strong style="display: block; margin-bottom: 8px"
+                    >Aufgabenverwaltung</strong
+                  >
+                  <div class="bucket-list">
+                    <div class="bucket-item">
+                      <img
+                        src="design\task_open.png"
+                        alt="Offene Aufgaben"
+                        class="planner-icon"
+                      />
+                      <span>Offen</span>
+                    </div>
+
+                    <div class="bucket-item">
+                      <img
+                        src="design\task_inProgress.png"
+                        alt="Begonnene Aufgaben"
+                        class="planner-icon"
+                      />
+                      <span>In Arbeit</span>
+                    </div>
+
+                    <div class="bucket-item">
+                      <img
+                        src="design\task_completed.png"
+                        alt="Abgeschlossene Aufgaben"
+                        class="planner-icon"
+                      />
+                      <span>Abgeschlossen</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="mini-panel">
+                  <strong style="display: block; margin-bottom: 8px"
+                    >Analyse</strong
+                  >
+                  <div
+                    style="
+                      height: 130px;
+                      display: grid;
+                      align-items: end;
+                      grid-template-columns: repeat(5, 1fr);
+                      gap: 8px;
+                    "
+                  >
+                    <span
+                      style="
+                        height: 38%;
+                        background: linear-gradient(
+                          180deg,
+                          rgba(124, 231, 222, 0.45),
+                          rgba(124, 231, 222, 0.95)
+                        );
+                        border-radius: 10px 10px 0 0;
+                      "
+                    ></span>
+                    <span
+                      style="
+                        height: 52%;
+                        background: linear-gradient(
+                          180deg,
+                          rgba(124, 231, 222, 0.45),
+                          rgba(124, 231, 222, 0.95)
+                        );
+                        border-radius: 10px 10px 0 0;
+                      "
+                    ></span>
+                    <span
+                      style="
+                        height: 76%;
+                        background: linear-gradient(
+                          180deg,
+                          rgba(124, 231, 222, 0.45),
+                          rgba(124, 231, 222, 0.95)
+                        );
+                        border-radius: 10px 10px 0 0;
+                      "
+                    ></span>
+                    <span
+                      style="
+                        height: 58%;
+                        background: linear-gradient(
+                          180deg,
+                          rgba(124, 231, 222, 0.45),
+                          rgba(124, 231, 222, 0.95)
+                        );
+                        border-radius: 10px 10px 0 0;
+                      "
+                    ></span>
+                    <span
+                      style="
+                        height: 88%;
+                        background: linear-gradient(
+                          180deg,
+                          rgba(124, 231, 222, 0.45),
+                          rgba(124, 231, 222, 0.95)
+                        );
+                        border-radius: 10px 10px 0 0;
+                      "
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features">
+        <div class="container feature-showcase">
+          <div class="section-heading reveal">
+            <div>
+              <span class="badge">Feature Showcase</span>
+              <h2>Starke Kernfunktionen für den Planner-Alltag</h2>
+            </div>
+          </div>
+
+          <article class="main-feature reveal">
+            <div class="screenshot-box">
+              <img src="design/Gantt.gif" alt="TaskToolbox Gantt Chart" />
+            </div>
+            <div class="feature-copy">
+              <div class="chips">
+                <span class="chip lite">LITE</span>
+                <span class="chip pro">PRO erweitert</span>
+              </div>
+              <h3>Gantt-Chart</h3>
+              <p>
+                Das Gantt-Chart wird automatisch aus jedem Planner erzeugt und
+                verwandelt Boards in eine visuelle Timeline. Lite fokussiert den
+                schnellen Überblick, Pro erweitert die Ansicht für komplexere
+                Steuerung und tiefere Auswertung.
+              </p>
+              <p>
+                Besonders stark für Projektleiter, PMOs und Teams, die
+                Abhängigkeiten, Zeitfenster und Prioritäten auf einen Blick
+                erfassen wollen.
+              </p>
+            </div>
+          </article>
+
+          <article class="main-feature reveal">
+            <div class="feature-copy">
+              <div class="chips">
+                <span class="chip lite">LITE</span>
+                <span class="chip pro">PRO erweitert</span>
+              </div>
+              <h3>Task- &amp; Bucket-Manager</h3>
+              <p>
+                Aufgaben und Buckets lassen sich deutlich detaillierter
+                verwalten als direkt im Standard-Planner. Dadurch entstehen
+                klarere Strukturen, schnellere Pflegeprozesse und weniger
+                Reibung bei der Projektorganisation.
+              </p>
+              <p>
+                Lite liefert die starken Basisfunktionen, Pro baut darauf mit
+                erweiterten Verwaltungs- und Standardisierungsoptionen auf.
+              </p>
+            </div>
+            <div class="screenshot-box">
+              <img
+                src="design\Management.png"
+                alt="TaskToolbox Aufgaben Management"
+              />
+            </div>
+          </article>
+
+          <article class="main-feature reveal">
+            <div class="screenshot-box">
+              <img src="design\Analyse.png" alt="TaskToolbox Gantt Chart" />
+            </div>
+            <div class="feature-copy">
+              <div class="chips">
+                <span class="chip lite">LITE</span>
+                <span class="chip pro">PRO erweitert</span>
+              </div>
+              <h3>Analyse</h3>
+              <p>
+                TaskToolbox liefert eine ausgebautere Sicht auf Planner-Daten
+                und macht Fortschritt, Aufgabenlast und Strukturprobleme früh
+                sichtbar. So werden Entscheidungen schneller und fundierter.
+              </p>
+              <p>
+                In Pro lassen sich Analysen mit weiteren Steuerungssichten wie
+                Burn-Down, Burn-Up und erweiterten Planungsansätzen ausbauen.
+              </p>
+            </div>
+          </article>
+
+          <div class="feature-grid">
+            <article class="feature-tile reveal">
+              <div class="feature-media">
+                Kleiner Screenshot<br />Dependencies View
+              </div>
+              <div class="chips"><span class="chip pro">PRO</span></div>
+              <h4>Task-Dependencies</h4>
+              <p>
+                Abhängigkeiten zwischen Aufgaben sichtbar machen und
+                Planungsrisiken früher erkennen.
+              </p>
+            </article>
+
+            <article class="feature-tile reveal">
+              <div class="feature-media">
+                Kleiner Screenshot<br />Templates Library
+              </div>
+              <div class="chips"><span class="chip pro">PRO</span></div>
+              <h4>Bucket- &amp; Task-Templates</h4>
+              <p>
+                Wiederkehrende Projekttypen standardisieren und neue Planer
+                deutlich schneller aufsetzen.
+              </p>
+            </article>
+
+            <article class="feature-tile reveal">
+              <div class="feature-media">
+                Kleiner Screenshot<br />Milestone Board
+              </div>
+              <div class="chips"><span class="chip pro">PRO</span></div>
+              <h4>Milestones</h4>
+              <p>
+                Wichtige Meilensteine als zentrale Steuerungspunkte definieren
+                und transparent verfolgen.
+              </p>
+            </article>
+
+            <article class="feature-tile reveal">
+              <div class="feature-media">Kleiner Screenshot<br />Own Tasks</div>
+              <div class="chips">
+                <span class="chip lite">LITE</span
+                ><span class="chip pro">PRO</span>
+              </div>
+              <h4>Own-Tasks-Overview</h4>
+              <p>
+                Persönliche Aufgaben gebündelt betrachten und Prioritäten über
+                mehrere Teams und Planner hinweg besser steuern.
+              </p>
+            </article>
+
+            <article class="feature-tile reveal">
+              <div class="feature-media">
+                Kleiner Screenshot<br />PDF Export
+              </div>
+              <div class="chips">
+                <span class="chip lite">LITE</span
+                ><span class="chip pro">PRO</span>
+              </div>
+              <h4>PDF Creation</h4>
+              <p>
+                Pläne, Reports oder Statusstände einfach als PDF exportieren und
+                teilen.
+              </p>
+            </article>
+
+            <article class="feature-tile reveal">
+              <div class="feature-media">
+                Kleiner Screenshot<br />Reminder Center
+              </div>
+              <div class="chips">
+                <span class="chip lite">LITE</span
+                ><span class="chip pro">PRO</span>
+              </div>
+              <h4>User-Window &amp; Reminders</h4>
+              <p>
+                Nutzerbezogene Übersichten und Erinnerungen für bessere
+                Follow-ups und Verbindlichkeit.
+              </p>
+            </article>
+
+            <article class="feature-tile reveal">
+              <div class="feature-media">Kleiner Screenshot<br />Branding</div>
+              <div class="chips"><span class="chip pro">PRO</span></div>
+              <h4>Branding</h4>
+              <p>
+                Farben und Logo an die eigene Organisation anpassen und
+                professioneller ausrollen.
+              </p>
+            </article>
+
+            <article class="feature-tile reveal">
+              <div class="feature-media">
+                Kleiner Screenshot<br />Sprint Charts
+              </div>
+              <div class="chips"><span class="chip pro">PRO</span></div>
+              <h4>Burn-Down / Burn-Up</h4>
+              <p>
+                Fortschritt in agilen Kontexten klar visualisieren und
+                Veränderungen im Scope besser einordnen.
+              </p>
+            </article>
+
+            <article class="feature-tile reveal">
+              <div class="feature-media">
+                Kleiner Screenshot<br />Planning Views
+              </div>
+              <div class="chips"><span class="chip pro">PRO</span></div>
+              <h4>Sprint- &amp; Tagesplanung</h4>
+              <p>
+                Zusätzliche Planungsansichten für Daily- und Weekly-Rhythmen
+                sowie fokussierte Tagessteuerung.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div>
+              <span class="badge">Pakete &amp; Kostenmodell</span>
+              <h2>
+                Lite für schnellen Mehrwert. Pro für echte Projektsteuerung.
+              </h2>
+            </div>
+          </div>
+
+          <div class="pricing-grid">
+            <article class="pricing-card reveal">
+              <div class="pricing-header">
+                <div>
+                  <div class="plan">TaskToolbox Lite</div>
+                  <div class="price">€9 <small>/ User / Monat</small></div>
+                  <div style="color: var(--muted)">
+                    Ideal für Teams, die Planner sofort übersichtlicher und
+                    produktiver machen wollen.
+                  </div>
+                </div>
+                <span class="tag">Starter</span>
+              </div>
+              <ul class="feature-list">
+                <li>
+                  <span class="icon-check">✓</span>
+                  <div>
+                    <strong>Gantt-Chart Basic</strong><br /><span
+                      >Automatische Timeline direkt aus dem Planner</span
+                    >
+                  </div>
+                </li>
+                <li>
+                  <span class="icon-check">✓</span>
+                  <div>
+                    <strong>Task- &amp; Bucket-Management</strong><br /><span
+                      >Aufgaben und Buckets effizient pflegen</span
+                    >
+                  </div>
+                </li>
+                <li>
+                  <span class="icon-check">✓</span>
+                  <div>
+                    <strong>Planner-Analyse Basic</strong><br /><span
+                      >Schneller Überblick über Status und Arbeitslast</span
+                    >
+                  </div>
+                </li>
+                <li>
+                  <span class="icon-check">✓</span>
+                  <div>
+                    <strong>Own Tasks, PDF &amp; Reminder</strong><br /><span
+                      >Nützliche Alltagsfunktionen ohne komplexes Setup</span
+                    >
+                  </div>
+                </li>
+              </ul>
+              <a class="btn btn-secondary" href="#contact">Lite anfragen</a>
+            </article>
+
+            <article class="pricing-card featured reveal">
+              <div class="pricing-header">
+                <div>
+                  <div class="plan">TaskToolbox Pro</div>
+                  <div class="price">€19 <small>/ User / Monat</small></div>
+                  <div style="color: var(--muted)">
+                    Für Teams mit erweiterten Anforderungen an Planung,
+                    Standards und Skalierung.
+                  </div>
+                </div>
+                <span class="tag pro">Empfohlen</span>
+              </div>
+              <ul class="feature-list">
+                <li>
+                  <span class="icon-check">✓</span>
+                  <div>
+                    <strong>Alle Lite-Features</strong><br /><span
+                      >Plus vertiefte Steuerungs- und
+                      Standardisierungsfunktionen</span
+                    >
+                  </div>
+                </li>
+                <li>
+                  <span class="icon-check">✓</span>
+                  <div>
+                    <strong>Dependencies &amp; Milestones</strong><br /><span
+                      >Abhängigkeiten sichtbar machen und Meilensteine
+                      steuern</span
+                    >
+                  </div>
+                </li>
+                <li>
+                  <span class="icon-check">✓</span>
+                  <div>
+                    <strong>Templates &amp; Branding</strong><br /><span
+                      >Wiederverwendbare Standards und individuelle
+                      Anpassung</span
+                    >
+                  </div>
+                </li>
+                <li>
+                  <span class="icon-check">✓</span>
+                  <div>
+                    <strong>Advanced Analysis &amp; Planning</strong><br /><span
+                      >Burn-Down, Sprint-Planung, Favoriten und
+                      Tagesplanung</span
+                    >
+                  </div>
+                </li>
+              </ul>
+              <a class="btn btn-primary" href="#contact">Pro Demo anfragen</a>
+            </article>
+          </div>
+
+          <div class="compare-table-wrap reveal">
+            <table>
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Lite</th>
+                  <th>Pro</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Gantt-Chart</strong></td>
+                  <td><span class="pill lite">Basic</span></td>
+                  <td><span class="pill pro">Advanced</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Task-Manager</strong></td>
+                  <td><span class="pill lite">Included</span></td>
+                  <td><span class="pill pro">Included</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Bucket-Manager</strong></td>
+                  <td><span class="pill lite">Basic</span></td>
+                  <td><span class="pill pro">Advanced</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Planner-Analysis</strong></td>
+                  <td><span class="pill lite">Basic</span></td>
+                  <td><span class="pill pro">Advanced</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Own-Tasks-Overview</strong></td>
+                  <td><span class="pill lite">Basic</span></td>
+                  <td><span class="pill pro">Advanced</span></td>
+                </tr>
+                <tr>
+                  <td><strong>PDF Creation</strong></td>
+                  <td><span class="pill lite">Basic</span></td>
+                  <td><span class="pill pro">Advanced</span></td>
+                </tr>
+                <tr>
+                  <td><strong>User-Window / Send Reminders</strong></td>
+                  <td><span class="pill lite">Included</span></td>
+                  <td><span class="pill pro">Included</span></td>
+                </tr>
+                <tr>
+                  <td><strong>App-Infoscreen / Feature-Tutorials</strong></td>
+                  <td><span class="pill lite">Included</span></td>
+                  <td><span class="pill pro">Included</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Task-Dependencies</strong></td>
+                  <td><span class="pill no">–</span></td>
+                  <td><span class="pill pro">Included</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Milestone-Manager</strong></td>
+                  <td><span class="pill no">–</span></td>
+                  <td><span class="pill pro">Included</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Branding (Farbe + Logo)</strong></td>
+                  <td><span class="pill no">–</span></td>
+                  <td><span class="pill pro">Included</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Burn-Down &amp; Burn-Up</strong></td>
+                  <td><span class="pill no">–</span></td>
+                  <td><span class="pill pro">Included</span></td>
+                </tr>
+                <tr>
+                  <td><strong>User-Settings</strong></td>
+                  <td><span class="pill no">–</span></td>
+                  <td><span class="pill pro">Included</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Bucket- &amp; Task-Templates</strong></td>
+                  <td><span class="pill no">–</span></td>
+                  <td><span class="pill pro">Included</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Favoriten Teams / Planner</strong></td>
+                  <td><span class="pill no">–</span></td>
+                  <td><span class="pill pro">Included</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Sprint-Planung</strong></td>
+                  <td><span class="pill no">–</span></td>
+                  <td><span class="pill pro">Included</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Tagesplanner</strong></td>
+                  <td><span class="pill no">–</span></td>
+                  <td><span class="pill pro">Included</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="requirements">
+  <div class="container">
+    <div class="section-heading reveal">
+      <div>
+        <span class="badge">Technische Voraussetzungen</span>
+        <h2>Passend für bestehende Microsoft-365-Umgebungen</h2>
+      </div>
+      <p>
+        Ein Kernvorteil von TaskToolbox ist das einfache Deployment. Die
+        Lösung baut auf bekannten Microsoft-Komponenten auf und bleibt
+        dadurch nachvollziehbar, wartbar und anschlussfähig.
+      </p>
+    </div>
+
+    <div class="requirements-grid">
+
+      <!-- Lite Requirements -->
+
+      <article class="req-card reveal">
+        <h3>Lite Requirements</h3>
+        <ul>
+
+          <li>
+            <span class="req-label">
+              <img src="design\powerapps.svg.png" class="req-icon" alt="Microsoft 365">
+              Power Apps License (M365 E3/E5 or equivalent)
+            </span>
+            <span class="pill lite">Erforderlich</span>
+          </li>
+
+          <li>
+            <span class="req-label">
+              <img src="design/teams.svg.png" class="req-icon" alt="Microsoft Teams">
+              Microsoft Teams Group
+            </span>
+            <span class="pill lite">Erforderlich</span>
+          </li>
+
+          <li>
+            <span class="req-label">
+              <img src="design/planner.png" class="req-icon" alt="Microsoft Planner">
+              Microsoft Planner Plan
+            </span>
+            <span class="pill lite">Erforderlich</span>
+          </li>
+
+        </ul>
+      </article>
+
+      <!-- Pro Requirements -->
+
+      <article class="req-card reveal">
+        <h3>Pro Requirements</h3>
+        <ul>
+
+          <li>
+            <span class="req-label">
+              <img src="design\powerapps.svg.png" class="req-icon" alt="Microsoft 365">
+              Power Apps License (M365 E3/E5 or equivalent)
+            </span>
+            <span class="pill pro">Erforderlich</span>
+          </li>
+
+          <li>
+            <span class="req-label">
+              <img src="design/teams.svg.png" class="req-icon" alt="Microsoft Teams">
+              Microsoft Teams Group
+            </span>
+            <span class="pill pro">Erforderlich</span>
+          </li>
+
+          <li>
+            <span class="req-label">
+              <img src="design/planner.png" class="req-icon" alt="Microsoft Planner">
+              Microsoft Planner Plan
+            </span>
+            <span class="pill pro">Erforderlich</span>
+          </li>
+
+          <li>
+            <span class="req-label">
+              <img src="design/sharepoint.png" class="req-icon" alt="SharePoint">
+              SharePoint Site
+            </span>
+            <span class="pill extra">Pro zusätzlich</span>
+          </li>
+
+          <li>
+            <span class="req-label">
+              <img src="design/powerautomate.png" class="req-icon" alt="Power Automate">
+              Power Automate Flows
+            </span>
+            <span class="pill extra">Pro zusätzlich</span>
+          </li>
+
+        </ul>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+      <section class="cta">
+        <div class="container">
+          <div class="cta-box reveal">
+            <div>
+              <span class="badge">Warum TaskToolbox?</span>
+              <h2
+                style="
+                  margin: 12px 0 8px;
+                  font-size: clamp(1.6rem, 3vw, 2.4rem);
+                  letter-spacing: -0.03em;
+                "
+              >
+                Die Brücke zwischen einfachem Planner und echter Teamsteuerung
+              </h2>
+              <p style="margin: 0; color: var(--muted); max-width: 70ch">
+                Für viele Teams ist Planner zu simpel für echte Projektführung.
+                TaskToolbox schließt genau diese Lücke – ohne unnötig schweres
+                System oder komplizierte Einführung.
+              </p>
+            </div>
+            <a class="btn btn-primary" href="#contact">Kontakt aufnehmen</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container">
+          <div class="section-heading reveal">
+            <div>
+              <span class="badge">Contact</span>
+              <h2>Interesse an Demo, Pilot oder Einführung?</h2>
+            </div>
+          </div>
+
+          <div class="contact-grid">
+            <aside class="contact-card reveal">
+              <h3 style="margin-top: 0; font-size: 1.35rem">
+                TaskToolbox kontaktieren
+              </h3>
+              <p style="color: var(--muted); margin-bottom: 0">
+                Geeignet für Produktanfragen, Demos, Preisgespräche,
+                Pilot-Rollouts oder Partnerschaften.
+              </p>
+              <div class="contact-list">
+                <div class="contact-item">
+                  <strong>E-Mail</strong>
+                  <span style="color: var(--muted)">hello@tasktoolbox.app</span>
+                </div>
+                <div class="contact-item">
+                  <strong>Antworttyp</strong>
+                  <span style="color: var(--muted)"
+                    >Demo, Use Case Review, Lizenzmodell</span
+                  >
+                </div>
+                <div class="contact-item">
+                  <strong>Deployment-Fokus</strong>
+                  <span style="color: var(--muted)"
+                    >Microsoft 365, Teams, Planner, Power Platform</span
+                  >
+                </div>
+              </div>
+            </aside>
+
+            <div class="contact-card reveal">
+              <form id="contactForm">
+                <div class="field-grid">
+                  <label>
+                    Name
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Max Mustermann"
+                      required
+                    />
+                  </label>
+                  <label>
+                    Firma
+                    <input
+                      type="text"
+                      name="company"
+                      placeholder="Beispielfirma GmbH"
+                    />
+                  </label>
+                </div>
+                <div class="field-grid">
+                  <label>
+                    E-Mail
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="max@firma.de"
+                      required
+                    />
+                  </label>
+                  <label>
+                    Interesse
+                    <select name="interest">
+                      <option>Lite</option>
+                      <option>Pro</option>
+                      <option>Pilot / Proof of Concept</option>
+                      <option>Partnerschaft</option>
+                    </select>
+                  </label>
+                </div>
+                <label>
+                  Nachricht
+                  <textarea
+                    name="message"
+                    placeholder="Beschreibe kurz deinen Use Case, Teamgröße oder gewünschte Funktionen..."
+                  ></textarea>
+                </label>
+                <div
+                  style="
+                    display: flex;
+                    gap: 12px;
+                    align-items: center;
+                    flex-wrap: wrap;
+                  "
+                >
+                  <button class="btn btn-primary" type="submit">
+                    Anfrage senden
+                  </button>
+                  <span id="formMessage" style="color: var(--muted)"></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-row">
+        <div>© 2026 TaskToolbox</div>
+        <div>
+          PowerApps CanvasApp · Microsoft Planner Erweiterung · Modernes
+          Landingpage-Konzept
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
