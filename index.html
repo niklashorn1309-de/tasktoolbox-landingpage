@@ -336,18 +336,6 @@
 
 <article class="feature-tile reveal">
   <div class="feature-media">
-    Kleiner Screenshot<br />Templates Library
-  </div>
-  <div class="chips"><span class="chip pro">PRO</span></div>
-  <h4>Bucket- &amp; Task-Templates</h4>
-  <p>
-    Wiederkehrende Projekttypen standardisieren und neue Planer
-    deutlich schneller aufsetzen.
-  </p>
-</article>
-
-<article class="feature-tile reveal">
-  <div class="feature-media">
     <img src="design/Milestones.png" alt="TaskToolbox Milestones" />
   </div>
   <div class="chips"><span class="chip pro">PRO</span></div>
@@ -355,6 +343,18 @@
   <p>
     Wichtige Meilensteine als zentrale Steuerungspunkte definieren
     und transparent verfolgen.
+  </p>
+</article>
+
+<article class="feature-tile reveal">
+  <div class="feature-media">
+    Kleiner Screenshot<br />Templates Library
+  </div>
+  <div class="chips"><span class="chip pro">PRO</span></div>
+  <h4>Bucket- &amp; Task-Templates</h4>
+  <p>
+    Wiederkehrende Projekttypen standardisieren und neue Planer
+    deutlich schneller aufsetzen.
   </p>
 </article>
 
@@ -383,8 +383,8 @@
   </div>
   <h4>PDF Creation</h4>
   <p>
-    Pläne, Reports oder Statusstände einfach als PDF exportieren und
-    teilen.
+    Pläne, Reports oder Statusstände einfach als PDF exportieren und teilen.
+    Mit Pro lässt sich der PDF-Header individuell anpassen.
   </p>
 </article>
 
@@ -396,10 +396,10 @@
     <span class="chip lite">LITE</span>
     <span class="chip pro">PRO</span>
   </div>
-  <h4>User-Window &amp; Reminders</h4>
+  <h4>Task Reminders</h4>
   <p>
-    Nutzerbezogene Übersichten und Erinnerungen für bessere
-    Follow-ups und Verbindlichkeit.
+    Überfällige Aufgaben pro Nutzer bündeln und gezielte Erinnerungen versenden
+    - automatisch generierte E-Mails lassen sich individuell anpassen.
   </p>
 </article>
           </div>
@@ -608,7 +608,7 @@
                   <td><span class="pill pro">Advanced</span></td>
                 </tr>
                 <tr>
-                  <td><strong>User-Window / Send Reminders</strong></td>
+                  <td><strong>Task Reminders</strong></td>
                   <td><span class="pill lite">Included</span></td>
                   <td><span class="pill pro">Included</span></td>
                 </tr>
@@ -640,7 +640,7 @@
                 <tr>
                   <td>
                     <strong
-                      >User-Settings &amp; Favoriten Teams / Planner</strong
+                      >User-Settings &amp; Favoriten</strong
                     >
                   </td>
                   <td><span class="pill no">–</span></td>
@@ -653,120 +653,80 @@
       </section>
 
       <section id="requirements">
-        <div class="container">
-          <div class="section-heading reveal">
-            <div>
-              <span class="badge">Technische Voraussetzungen</span>
-              <h2>Passend für bestehende Microsoft-365-Umgebungen</h2>
-            </div>
-            <p>
-              Ein Kernvorteil von TaskToolbox ist das einfache Deployment. Die
-              Lösung baut auf bekannten Microsoft-Komponenten auf und bleibt
-              dadurch nachvollziehbar, wartbar und anschlussfähig.
-            </p>
-          </div>
+  <div class="container">
+    <div class="section-heading reveal">
+      <div>
+        <span class="badge">Technische Voraussetzungen</span>
+        <h2>Passend für bestehende Microsoft-365-Umgebungen</h2>
+      </div>
+      <p>
+        TaskToolbox baut vollständig auf bestehenden Microsoft-365-Komponenten
+        auf. Dadurch bleibt das Deployment schlank und fügt sich nahtlos in
+        bestehende Arbeitsumgebungen ein.
+      </p>
+    </div>
 
-          <div class="requirements-grid">
-            <!-- Lite Requirements -->
+    <div class="requirements-layout">
 
-            <article class="req-card reveal">
-              <h3>Lite Requirements</h3>
-              <ul>
-                <li>
-                  <span class="req-label">
-                    <img
-                      src="design\powerapps.svg.png"
-                      class="req-icon"
-                      alt="Microsoft 365"
-                    />
-                    Power Apps License (M365 E3/E5 or equivalent)
-                  </span>
-                  <span class="pill lite">Erforderlich</span>
-                </li>
+      <!-- LEFT: Requirements -->
+      <article class="req-card reveal">
+        <h3>System Requirements</h3>
 
-                <li>
-                  <span class="req-label">
-                    <img
-                      src="design/teams.svg.png"
-                      class="req-icon"
-                      alt="Microsoft Teams"
-                    />
-                    Microsoft Teams Group
-                  </span>
-                  <span class="pill lite">Erforderlich</span>
-                </li>
+        <ul>
+          <li>
+            <span class="req-label">
+              <img src="design/powerapps.svg.png" class="req-icon" alt="Power Apps"/>
+              Power Apps License (M365 E3/E5)
+            </span>
+            <span class="pill lite">Erforderlich</span>
+          </li>
 
-                <li>
-                  <span class="req-label">
-                    <img
-                      src="design/planner.png"
-                      class="req-icon"
-                      alt="Microsoft Planner"
-                    />
-                    Microsoft Planner Plan
-                  </span>
-                  <span class="pill lite">Erforderlich</span>
-                </li>
-              </ul>
-            </article>
+          <li>
+            <span class="req-label">
+              <img src="design/teams.svg.png" class="req-icon" alt="Microsoft Teams"/>
+              Microsoft Teams Group
+            </span>
+            <span class="pill lite">Erforderlich</span>
+          </li>
 
-            <!-- Pro Requirements -->
+          <li>
+            <span class="req-label">
+              <img src="design/planner.png" class="req-icon" alt="Microsoft Planner"/>
+              Microsoft Planner Plan
+            </span>
+            <span class="pill lite">Erforderlich</span>
+          </li>
 
-            <article class="req-card reveal">
-              <h3>Pro Requirements</h3>
-              <ul>
-                <li>
-                  <span class="req-label">
-                    <img
-                      src="design\powerapps.svg.png"
-                      class="req-icon"
-                      alt="Microsoft 365"
-                    />
-                    Power Apps License (M365 E3/E5 or equivalent)
-                  </span>
-                  <span class="pill pro">Erforderlich</span>
-                </li>
+          <li>
+            <span class="req-label">
+              <img src="design/sharepoint.png" class="req-icon" alt="SharePoint"/>
+              SharePoint Site
+            </span>
+            <span class="pill extra">Pro zusätzlich</span>
+          </li>
+        </ul>
 
-                <li>
-                  <span class="req-label">
-                    <img
-                      src="design/teams.svg.png"
-                      class="req-icon"
-                      alt="Microsoft Teams"
-                    />
-                    Microsoft Teams Group
-                  </span>
-                  <span class="pill pro">Erforderlich</span>
-                </li>
+        <p class="req-note">
+          Die Lite-Version nutzt ausschließlich Planner-Daten.  
+          In der Pro-Version wird SharePoint als zusätzliche
+          Datenquelle für erweiterte Funktionen verwendet.
+        </p>
+      </article>
 
-                <li>
-                  <span class="req-label">
-                    <img
-                      src="design/planner.png"
-                      class="req-icon"
-                      alt="Microsoft Planner"
-                    />
-                    Microsoft Planner Plan
-                  </span>
-                  <span class="pill pro">Erforderlich</span>
-                </li>
+      <!-- RIGHT: Architecture Diagram -->
+      <div class="architecture-card reveal">
 
-                <li>
-                  <span class="req-label">
-                    <img
-                      src="design/sharepoint.png"
-                      class="req-icon"
-                      alt="SharePoint"
-                    />
-                    SharePoint Site
-                  </span>
-                  <span class="pill extra">Pro zusätzlich</span>
-                </li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
+        <img
+          src="design\ttb_architecture.drawio.png"
+          alt="TaskToolbox Architektur"
+          class="architecture-image"
+        />
+
+      </div>
+
+    </div>
+  </div>
+</section>
 
       <section class="cta">
         <div class="container">

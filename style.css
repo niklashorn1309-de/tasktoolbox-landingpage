@@ -747,7 +747,35 @@ td strong {
     object-fit:contain;
     flex-shrink:0;
 }
+.requirements-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 22px;
+  align-items: stretch;
+}
 
+.architecture-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+}
+
+.architecture-image {
+  width: 100%;
+  height: auto;
+  max-width: 520px;
+}
+
+.req-note {
+  margin-top: 18px;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
 .cta {
     padding: 12px 0 42px;
 }
